@@ -85,6 +85,7 @@ public interface Constants {
     // Other settings
     public static final String MINFREE_DEFAULT = "oom_default";
     public static final String MINFREE_PATH = "/sys/module/lowmemorykiller/parameters/minfree";
+    public static final String MINFREE_PATH_OFF="/sys/module/lowmemorykiller/parameters/minfree_screen_off";
     public static final String MINFREE_ADJ_PATH = "/sys/module/lowmemorykiller/parameters/adj";
     public static final String READ_AHEAD_PATH ="/sys/block/mmcblk0/queue/read_ahead_kb";
     //"/sys/devices/virtual/bdi/default/read_ahead_kb"

@@ -96,6 +96,13 @@ public class MemSettings extends PreferenceFragment implements OnSharedPreferenc
 	
         values = Helpers.readOneLine(MINFREE_PATH).split(",");
 
+        //Fix the nullpointer
+        if(new File(MINFREE_PATH).canRead()) {
+            values = Helpers.LeerUnaLinea(MINFREE_PATH).split(",");
+        }else{
+            values = Helpers.LeerUnaLinea(MINFREE_PATH_OFF).split(",");
+        }
+
         mForegroundApp= findPreference(OOM_FOREGROUND_APP);
         mVisibleApp= findPreference(OOM_VISIBLE_APP);
         mSecondaryServer= findPreference(OOM_SECONDARY_SERVER);
