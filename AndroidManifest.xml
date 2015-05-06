@@ -1,52 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.brewcrewfoo.performance"
-          android:versionCode="2205"
-          android:versionName="2.2.5">
+    package="mx.klozz.xperience.tweaker"
+    android:versionCode="251"
+    android:versionName="2.5.1">
 
-    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22"/>
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="22" />
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!--Añadimos los permisos necesarios-->
     <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application
-            android:allowBackup="true"
-            android:icon="@drawable/ic_launcher"
-            android:label="@string/app_name"
-            android:theme="@style/Theme_Dark">
-        <activity android:name=".activities.MainActivity">
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme_Dark">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.brewcrewfoo.performance.activities.BackupRestore"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.checkSU" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.MemUsageActivity"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.PCSettings"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.PackActivity"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.FlasherActivity"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.HideTabs"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.TouchScreenSettings"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.KSMActivity" android:windowSoftInputMode="stateHidden"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.ZramActivity" android:windowSoftInputMode="stateHidden"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.PFKActivity" android:windowSoftInputMode="stateHidden"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.FreezerActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.ParamActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.KSMSetActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.GovSetActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.IOSetActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.VMSettings" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.BuildPropEditor" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.FileChooser" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.ResidualsActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.iResidualsActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
-        <activity android:name="com.brewcrewfoo.performance.activities.SysctlEditor" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.BackupRestore"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.checkSU" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.MemUsageActivity"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.Settings"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.PackageActivity"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.FlasherActivity"/>
+        <activity android:name="mx.klozz.xperience.tweaker.tabs.HideTabs"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.TouchScreenSettings"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.KSMActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.ZramActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.PFKActivity" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.FreezerActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.ParamActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.KSMSetActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.GobernorActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.IOSchedActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.VMSettings" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.BuildPropEditor" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.FileChooser" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.ResidualsActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.ResidualsActivity2" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:name="mx.klozz.xperience.tweaker.activities.SysctlEditor" android:configChanges="keyboardHidden|orientation|screenSize"/>
 
         <receiver android:name=".service.BootReceiver" android:enabled="true">
             <intent-filter>
@@ -56,19 +59,19 @@
             </intent-filter>
         </receiver>
         <receiver
-                android:name="com.brewcrewfoo.performance.widget.PCWidget"
-                android:label="Performance Control">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
-                <action android:name="com.brewcrewfoo.performance.ACTION_FREQS_CHANGED"/>
-            </intent-filter>
+        android:name="mx.klozz.xperience.tweaker.widget.Widget"
+        android:label="XPE Kernel Tweaker">
+        <intent-filter>
+            <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            <action android:name="mx.klozz.xperience.tweaker.ACTION_FREQS_CHANGED"/>
+        </intent-filter>
 
-            <meta-data
-                    android:name="android.appwidget.provider"
-                    android:resource="@xml/widget_info"/>
-        </receiver>
+        <meta-data
+            android:name="android.appwidget.provider"
+            android:resource="@xml/widget_info"/>
+    </receiver>
 
-        <service android:name="com.brewcrewfoo.performance.service.BootService"/>
+        <service android:name="mx.klozz.xperience.tweaker.service.BootService"/>
 
     </application>
 

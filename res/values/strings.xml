@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <resources>
+    <string name="app_name">XPerience Tweaker</string>
 
-    <string name="app_name">Performance Control</string>
+    <string name="CPU_VIEW_1">1</string>
+    <string name="ver_dialog_Medium_Text">Medium Text</string>
+
     <!-- Main tabs -->
     <string-array name="tabs">
+        <item>Time In State</item>
         <item>CPU Settings</item>
         <item>CPU Advanced</item>
-        <item>Battery</item>
         <item>Memory Settings</item>
         <item>Voltage Settings</item>
+        <item>Battery</item>
         <item>Advanced Settings</item>
-        <item>Time In State</item>
         <item>Disk Info</item>
         <item>Tools</item>
     </string-array>
@@ -58,16 +60,16 @@
     <string name="fast_charge_notification_title">Fast Charge is ON!</string>
     <string name="fast_charge_notification_message">Phone is in charge-only mode!</string>
 
-<!-- minfree -->
-   <string name="prefcat_oom">MINFREE TASKKILLER</string>
-   <string name="title_foreground_app">Foreground Applications</string>
-   <string name="title_visible_app">Visible Applications</string>
-   <string name="title_secondary_server">Secondary Server</string>
-   <string name="title_hidden_app">Hidden Applications</string>
-   <string name="title_content_providers">Content Providers</string>
-   <string name="title_empty_app">Empty Applications</string>
-   <string name="prefcat_oom_predefines">PRESETS</string>
-   <string name="pt_oom">Minfree Taskkiller Presets</string>
+    <!-- minfree -->
+    <string name="prefcat_oom">MINFREE TASKKILLER</string>
+    <string name="title_foreground_app">Foreground Applications</string>
+    <string name="title_visible_app">Visible Applications</string>
+    <string name="title_secondary_server">Secondary Server</string>
+    <string name="title_hidden_app">Hidden Applications</string>
+    <string name="title_content_providers">Content Providers</string>
+    <string name="title_empty_app">Empty Applications</string>
+    <string name="prefcat_oom_predefines">PRESETS</string>
+    <string name="pt_oom">Minfree Taskkiller Presets</string>
 
     <string-array name="oom_values">
         <item>Very Light</item>
@@ -92,43 +94,43 @@
     <string name="prefcat_bln">BACKLIGHT NOTIFICATION</string>
     <string name="pt_bln">Backlight Notification</string>
     <!-- blx -->
-   <string name="blx_info">Battery Life eXtender feature\nAuthor Ezekeel</string>
-   <string name="prefcat_blx">BATTERY LIFE EXTENDER</string>
-   <string name="pt_blx_boot">Set on boot</string>
-   <string name="ps_blx_boot">Apply the amount above at boot</string>
-   <string name="blx_title">Charge limit:</string>
+    <string name="blx_info">Battery Life eXtender feature\nAuthor Ezekeel</string>
+    <string name="prefcat_blx">BATTERY LIFE EXTENDER</string>
+    <string name="pt_blx_boot">Set on boot</string>
+    <string name="ps_blx_boot">Apply the amount above at boot</string>
+    <string name="blx_title">Charge limit:</string>
     <!-- dsync -->
-   <string name="dsync_info">Dynamic FSync feature\nAuthor Paul Reioux (faux123)</string>
-   <string name="prefcat_dsync">DYNAMIC FSYNC</string>
-   <string name="ps_dsync">Setting will be restored on reboot</string>
-   <string name="pt_dsync">Dynamic Fsync</string>
+    <string name="dsync_info">Dynamic FSync feature\nAuthor Paul Reioux (faux123)</string>
+    <string name="prefcat_dsync">DYNAMIC FSYNC</string>
+    <string name="ps_dsync">Setting will be restored on reboot</string>
+    <string name="pt_dsync">Dynamic Fsync</string>
     <!-- bl_timeout -->
-   <string name="prefcat_bltimeout">BACKLIGHT TIMEOUT</string>
-   <string name="ps_bltimeout">%s ms</string>
-   <string name="bltimeout_title">Backlight timeout (ms)</string>
+    <string name="prefcat_bltimeout">BACKLIGHT TIMEOUT</string>
+    <string name="ps_bltimeout">%s ms</string>
+    <string name="bltimeout_title">Backlight timeout (ms)</string>
     <!-- bl_touch -->
-   <string name="prefcat_bltouch">BACKLIGHT ON TOUCHSCREEN</string>
-   <string name="pt_bltouch">Backlight on touchscreen</string>	
+    <string name="prefcat_bltouch">BACKLIGHT ON TOUCHSCREEN</string>
+    <string name="pt_bltouch">Backlight on touchscreen</string>
     <!-- pfk -->
-   <string name="pfk_info">Phantom Key Presses Filter module ver. %s\nAuthor Cristoforo Cataldo (Christopher83)</string>
-   <string name="prefcat_pfk">PHANTOM KEY PRESSES FILTER</string>
-   <string name="pt_home_enabled">Home key filter</string>
-   <string name="ps_home_enabled">Ignored key pressed: %s</string>
-   <string name="home_allowed_irq_title">Max allowed interrupts</string>
-   <string name="home_report_wait_title">Report wait time (ms)</string>
-   <string name="pkf_settings">PKF Settings</string>
-   <string name="pt_menuback_enabled">Menu/Back keys filter</string>
-   <string name="ps_menuback_enabled">Ignored key pressed: %s</string>
-   <string name="menuback_interrupt_checks_title">Interrupts checks</string>
-   <string name="menuback_first_err_wait_title">First error wait time (ms)</string>
-   <string name="menuback_last_err_wait_title">Last error wait time (ms)</string>
-   <string name="ps_pfk_set_on_boot">If enabled will restore all pkf settings on reboot</string>
+    <string name="pfk_info">Phantom Key Presses Filter module ver. %s\nAuthor Cristoforo Cataldo (Christopher83)</string>
+    <string name="prefcat_pfk">PHANTOM KEY PRESSES FILTER</string>
+    <string name="pt_home_enabled">Home key filter</string>
+    <string name="ps_home_enabled">Ignored key pressed: %s</string>
+    <string name="home_allowed_irq_title">Max allowed interrupts</string>
+    <string name="home_report_wait_title">Report wait time (ms)</string>
+    <string name="pkf_settings">PKF Settings</string>
+    <string name="pt_menuback_enabled">Menu/Back keys filter</string>
+    <string name="ps_menuback_enabled">Ignored key pressed: %s</string>
+    <string name="menuback_interrupt_checks_title">Interrupts checks</string>
+    <string name="menuback_first_err_wait_title">First error wait time (ms)</string>
+    <string name="menuback_last_err_wait_title">Last error wait time (ms)</string>
+    <string name="ps_pfk_set_on_boot">If enabled will restore all pkf settings on reboot</string>
     <!-- dynamic write back -->
-   <string name="dynamic_writeback_info">Dynamic Dirty Page Writebacks feature\nAuthor Cristoforo Cataldo (Christopher83)</string>
-   <string name="dynamic_write_back_title">DYNAMIC DIRTY PAGE WRITEBACKS</string>
-   <string name="pt_dynamic_write_back">Dynamic Dirty Writeback</string>
-   <string name="dynamic_writeback_active_title">Dirty Writeback Active centisecs</string>
-   <string name="dynamic_writeback_suspend_title">Dirty Writeback Suspend centisecs</string>
+    <string name="dynamic_writeback_info">Dynamic Dirty Page Writebacks feature\nAuthor Cristoforo Cataldo (Christopher83)</string>
+    <string name="dynamic_write_back_title">DYNAMIC DIRTY PAGE WRITEBACKS</string>
+    <string name="pt_dynamic_write_back">Dynamic Dirty Writeback</string>
+    <string name="dynamic_writeback_active_title">Dirty Writeback Active centisecs</string>
+    <string name="dynamic_writeback_suspend_title">Dirty Writeback Suspend centisecs</string>
     <!--  -->
     <string name="size_25_mb">25mb</string>
     <string name="size_50_mb">50mb</string>
@@ -183,7 +185,7 @@
     <string name="su_failed_title">Oops!</string>
     <string name="first_run_message">The application needs to check for root access and busybox.</string>
     <string name="su_failed_su_or_busybox">Root access failed or busybox was not found.</string>
-    
+
     <!-- Tools -->
     <string name="prefcat_sh">CUSTOM SHELL COMMAND</string>
     <string name="sh_title">Edit shell command</string>
@@ -308,13 +310,13 @@
     <!-- Vibration Intensity -->
     <string name="prefcat_viber">VIBRATION</string>
     <string name="viber_title">Vibration Intensity Control</string>
-    <!-- PC Settings -->
+    <!-- Settings -->
     <string name="pt_use_light_theme">Use light theme</string>
     <string name="ps_use_light_theme">If checked, Performance Control will use a Holo light theme</string>
-    <string name="pt_widget_bg_color">Widget bg color</string>
-    <string name="pt_widget_text_color">Widget text color</string>
-    <string name="pt_ver">"Version - "</string>
-    <string name="pt_show_tabs">Set Tabs Visibility</string>
+    <string name="widget_bg_color">Widget bg color</string>
+    <string name="widget_text_color">Widget text color</string>
+    <string name="ver">"Version - "</string>
+    <string name="show_tabs">Set Tabs Visibility</string>
     <!-- Color picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on Color to apply</string>
@@ -325,7 +327,6 @@
     <string name="set">Set</string>
     <string name="ics_color">Holo</string>
 
-    <!-- beta2-->
     <string name="reset_msg">Current values will be deleted and the default values ​​will be applied after reboot. Continue?</string>
 
     <string name="prefcat_logs">DUMP LOG EVENTS</string>
@@ -379,14 +380,11 @@
     <string name="btn_download">Download</string>
     <string name="pt_update">What\'s new</string>
     <string name="ps_zram_info">Zram must be stopped in order to change disk size</string>
-    <!-- beta2-->
-    <!-- 2.1.10-->
     <string name="prefcat_wifi_pm">WiFi SLEEP POWER MODE</string>
     <string name="pt_wifi_pm">WiFi PM</string>
     <string name="prefcat_mc_ps">MULTICORE POWER SAVING</string>
     <string name="pt_mc_ps">Multicore Power Saving</string>
     <string name="mt_io_ctrl">IO Scheduler Settings</string>
-    <!-- 2.1.11-->
     <string name="hotplug">HOTPLUG</string>
     <string name="pt_hp">Generic Hotplug</string>
     <string name="ps_hp">Disable one core when screen is off</string>
@@ -402,18 +400,17 @@
     <string-array name="mc_ps_array">
         <item>Off</item>
         <item>On</item>
-        <item>Agressive</item>
+        <item>Aggressive</item>
     </string-array>
+    <!--pt is tab name and ps is tab summary-->
     <string name="pt_gpu_fmax">GPU maximum frequency</string>
     <string name="pt_gpugov_set">GPU Control</string>
-    <!-- 2.1.13-->
     <string name="pt_int_sd">Override Internal SD Path</string>
     <string name="pt_ext_sd">Override External SD Path</string>
     <string name="save_batt">Power Saving</string>
     <string name="ksm_sleep_times">Sleep times:</string>
     <string name="ksm_pages_scanned">Pages Scanned:</string>
     <string name="info_auto_sd">Leave blank for autodetection</string>
-    <!--2.1.15-->
     <string name="krait">Undervolting Settings</string>
     <string name="pt_krait_boost">Decrease voltage</string>
     <string name="ps_krait_boost">The voltage is decreased by 25mV for Nominal, Fast and Faster bin chips if enabled</string>
@@ -422,17 +419,15 @@
     <string name="ps_krait_hi">Apply for frequencies higher than threshold | Current: %s μV</string>
     <string name="pt_krait_lo">Voltage for lower frequencies</string>
     <string name="ps_krait_lo">Apply for frequencies lower than threshold | Current: %s μV</string>
-    <!--2.1.16-->
     <string name="donor">Donate with PayPal</string>
     <string name="paypal">If you find this app useful</string>
-    <!--2.1.18-->
     <string name="liveoc">Live OC</string>
     <string name="oc_value">OC Value (%)</string>
     <string name="oc_target_low">OC Target Low</string>
     <string name="oc_target_high">OC Target High</string>
 
-    <string name="pt_initd">Use init.d script</string>
-    <string name="pt_script_name">Script name</string>
+    <string name="initd">Use init.d script</string>
+    <string name="script_name">Script name</string>
     <string name="mt_calib">Calibrate</string>
     <string name="mt_calib_nok">Your device must be plugged and fully charged.</string>
     <string name="mt_calib_ok">Tap on Calibrate button then unplug the device.</string>
@@ -457,8 +452,24 @@
     <string name="restore_bkup_title">Restore Backup</string>
     <string name="restore_bkup">%s will be restored. Continue?</string>
 
-    <!-- Compilation fix -->
-    <string name="CPU_VIEW_1">1</string>
-    <string name="ver_dialog_Medium_Text">Medium Text</string>
+    <!--Intelli_plug new changes-->
+    <string name="intelli_plugprof_sum">Profiles of intelli_plug Inside the parenthesis shows how many cores used.|
+        Current: </string>
+    <string name="int_prof">Intelli_profiles</string>
+    <string name="profile1">Balanced [4]</string>
+    <string name="profile2">Performance [4]</string>
+    <string name="profile3">Conservative [4]</string>
+    <string name="profile4">Eco performance[2]</string>
+    <string name="profile5">Eco Conservative [2]</string>
+    <string name="pt_int_prf">intelli profiles</string>
 
+    <string name="thermal_str">Thermal V2</string>
+    <string name="thermalv2">A modified thermal driver make by Faux123</string>
+
+    <string name="no_su">su does not exist!!!</string>
+    <string name="initd_updated">init.d script updated</string>
+
+    <string name="KernelTweaker3">licensia</string>
+
+    <string name="changelog_error">Error opening license</string>
 </resources>
