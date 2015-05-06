@@ -363,6 +363,26 @@ public class Helpers implements Constants {
         else return null;
     }
       
+
+    //Nuevos :D
+    //CPU HELPERS
+    public boolean isIntelliPlugEcoActive() {
+
+        return mUtils.readFile(INTELLI_PROFILES).equals("1");
+    }
+
+    public boolean hasIntelliPlugEco() {
+        return mUtils.existFile(INTELLI_PROFILES);
+    }
+
+    public int getIntelliProf() {
+        if (mUtils.existFile(INTELLI_PROFILES)) {
+            String value = mUtils.readFile(INTELLI_PROFILES);
+            if (value != null) return Integer.parseInt(value);
+        }
+        return 0;
+    }
+
     public static String ReadableByteCount(long bytes) {
         if (bytes < 1024) return bytes + " B";
         int exp = (int) (Math.log(bytes) / Math.log(1024));

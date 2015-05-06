@@ -46,20 +46,22 @@ import java.io.File;
 public class CPUAdvanced extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener,Constants {
 
     SharedPreferences mPreferences;
-    private CheckBoxPreference mMpdecision,mIntelliplug,mMsmHotplug,mEcomode,mGenHP,mKraitBoost;
-    private Preference mHotplugset,mGpuGovset,mKraitHi,mKraitLo,mOCval;
-    private ListPreference mSOmax,mSOmin,lmcps,lcpuq,lgpufmax,mKraitThres,mOClow,mOChigh;
+    private SwitchPreference mMpdecision, mIntelliplug, mMsmHotplug, mEcomode, mGenHP, mKraitBoost,mIntellinrcores,mIntellitouchboost,mIntelliscreenoffreq;
+    private Preference mHotplugset, mGpuGovset, mKraitHi, mKraitLo, mOCval;
+    private ListPreference mSOmax, mSOmin, lmcps, lcpuq, lgpufmax, mKraitThres, mOClow, mOChigh,mIntelliprofiles;
     private Context context;
-    private String hotpath=Helpers.hotplug_path();
-    private final CharSequence[] vmcps={"0","1","2"};
+    private String hotpath = Helpers.hotplug_path();
+    private final CharSequence[] vmcps = {"0", "1", "2"};
+    private final CharSequence[] prof = {"0","1", "2", "3","4"};
     private GPUClass gpu;
-    private String ps="";
-    private String ps_cpuquiet="";
-    private String app="";
-    private String ps_mc_ps="";
-    private final int vstep=12500;
-    private final int vmin=0;
-    private final int nvsteps=25;
+    private String ps = "";
+    private String ps_cpuquiet = "";
+    private String app = "";
+    private String ps_mc_ps = "";
+    private String intelliprof="";
+    private final int vstep = 12500;
+    private final int vmin = 0;
+    private final int nvsteps = 25;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -81,6 +83,7 @@ public class CPUAdvanced extends PreferenceFragment implements SharedPreferences
         mMpdecision = (CheckBoxPreference) findPreference("pref_mpdecision");
         mMsmHotplug = (CheckBoxPreference) findPreference("pref_msmhotplug");
         mIntelliplug = (CheckBoxPreference) findPreference("pref_intelliplug");
+        mIntelliprofiles = (ListPreference) findPreference("pref_intelliprof");
         mEcomode = (CheckBoxPreference) findPreference("pref_ecomode");
 
         lmcps = (ListPreference) findPreference("pref_mcps");
@@ -95,10 +98,11 @@ public class CPUAdvanced extends PreferenceFragment implements SharedPreferences
         mKraitHi = findPreference("pref_krait_hi");
         mKraitLo = findPreference("pref_krait_lo");
 
-        ps=getString(R.string.ps_so_minmax);
-        ps_cpuquiet=getString(R.string.ps_cpuquiet);
-        ps_mc_ps=getString(R.string.ps_mc_ps);
-        app=getString(R.string.app_name);
+        ps = getString(R.string.ps_so_minmax);
+        ps_cpuquiet = getString(R.string.ps_cpuquiet);
+        ps_mc_ps = getString(R.string.ps_mc_ps);
+        intelliprof = getString(R.string.intelli_plugprof_sum);
+        app = getString(R.string.app_name);
 
         final CharSequence[] entries = MainActivity.mAvailableFrequencies;
 
@@ -176,6 +180,15 @@ public class CPUAdvanced extends PreferenceFragment implements SharedPreferences
         }
         else{
             mIntelliplug.setChecked(Helpers.readOneLine(INTELLI_PLUG).equals("1"));
+        }
+        if (!new File(INTELLI_PROFILES).exists()) {
+            PreferenceCategory hideCat = (PreferenceCategory) findPreference("intelli_prof");
+            getPreferenceScreen().removePreference(hideCat);
+        } else {
+            mIntelliprofiles.setEntries(getResources().getStringArray(R.array.intelli_profiles));
+            mIntelliprofiles.setEntryValues(getResources().getStringArray(R.array.intelli_profiles_values));
+            mIntelliprofiles.setValue(Helpers.LeerUnaLinea(INTELLI_PROFILES));
+            mIntelliprofiles.setSummary(intelliprof + mIntelliprofiles.getEntry().toString());
         }
         if(hotpath==null){
             PreferenceCategory hideCat = (PreferenceCategory) findPreference("hotplugset");
@@ -403,6 +416,8 @@ public class CPUAdvanced extends PreferenceFragment implements SharedPreferences
         }
         else if(key.equals("pref_mcps")){
             setlistPref(lmcps,MC_PS,ps_mc_ps+lmcps.getEntry());
+        } else if (key.equals("pref_intelliprof")) {
+            setlistPref(mIntelliprofiles, INTELLI_PROFILES, intelliprof + mIntelliprofiles.getEntry());
         }
         else if(key.equals("pref_cpuquiet")){
             setlistPref(lcpuq,CPU_QUIET_CUR,ps_cpuquiet+lcpuq.getValue());
