@@ -74,7 +74,7 @@ public class BatteryInfo extends Fragment implements SeekBar.OnSeekBarChangeList
         super.onCreate(savedInstanceState);
         context = getActivity();
         mPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        batteryinfoReveiver = new BroadcastReceiver() {
+        batteryinfoReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
 
