@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+XPerience Kernel Tweaker - An Android CPU Control application
+Copyright (C) 2012  James Roberts 
+Copyright (C) 2014 horn3t
+Copyright (C) 2011-2015 Carlos "Klozz" Jesus <TeamMEX@XDA-Developers>
 
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -50,8 +68,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/filtru"
             android:inputType="text"
-            android:layout_marginLeft="10dip"
-            android:layout_marginRight="10dip"
+            android:layout_marginStart="10dip"
+            android:layout_marginEnd="10dip"
             android:layout_marginBottom="4dp"
             android:hint="@string/filter" />
     </LinearLayout>
@@ -84,21 +102,21 @@
         android:layout_gravity="bottom"
         android:layout_alignParentBottom="true"
         android:gravity="center_vertical"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:paddingBottom="10dp"
         android:visibility="gone">
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="@color/pc_light_gray"/>
+            android:background="@color/light_gray"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sob"
             android:id="@+id/set_on_boot"
             android:layout_alignParentTop="true"
-            android:paddingLeft="4dp"
+            android:paddingStart="4dp"
             android:paddingBottom="4dp"
             android:layout_marginTop="10dp" />
 
@@ -106,7 +124,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/applyAtBoot"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_below="@+id/set_on_boot" />
 
         <Button
@@ -115,9 +133,9 @@
             android:text="@string/apply_values"
             android:textSize="14sp"
             android:id="@+id/applyBtn"
-            android:layout_gravity="center_vertical|right"
+            android:layout_gravity="center_vertical|end"
             android:gravity="center_vertical|center_horizontal"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp" />
 
     </RelativeLayout>

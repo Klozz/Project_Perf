@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-Performance Control - An Android CPU Control application
-Copyright (C) 2012  James Roberts
+XPerience Kernel Tweaker - An Android CPU Control application
+Copyright (C) 2012  James Roberts 
+Copyright (C) 2014 horn3t
+Copyright (C) 2011-2015 Carlos "Klozz" Jesus <TeamMEX@XDA-Developers>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,7 +18,6 @@ Copyright (C) 2012  James Roberts
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:id="@+id/seekbar_dialog"
               android:layout_width="wrap_content"
@@ -38,6 +39,6 @@ Copyright (C) 2012  James Roberts
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dip"
             android:layout_marginTop="10dip"
-        android:layout_marginLeft="20dp" />
+        android:layout_marginStart="20dp" />
 
 </LinearLayout>

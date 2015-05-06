@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-Performance Control - An Android CPU Control application
+XPerience Kernel Tweaker - An Android CPU Control application
 Copyright (C) 2012  James Roberts
+Copyright (C) 2011-2015 Carlos "Klozz" Jesus <TeamMEX@XDA-Developers>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@ Copyright (C) 2012  James Roberts
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -26,18 +28,12 @@ Copyright (C) 2012  James Roberts
               android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <!--  <Space
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight=".3"
-    /> -->
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="25dp"
         android:gravity="center_vertical|center_horizontal"
-        android:id="@+id/lcurcpu"
+        android:id="@+id/lCurCPU"
         android:weightSum="1">
 
     </LinearLayout>
@@ -48,7 +44,7 @@ Copyright (C) 2012  James Roberts
         android:id="@+id/speed"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:layout_below="@+id/lcurcpu">
+        android:layout_below="@+id/lCurCPU">
 
         <TextView
             android:id="@+id/current_speed"
@@ -147,7 +143,7 @@ Copyright (C) 2012  James Roberts
                 android:id="@+id/governor_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="10dip"
+                android:layout_marginEnd="10dip"
                 android:text="@string/governor"
                 android:textSize="14sp"/>
 
@@ -170,7 +166,7 @@ Copyright (C) 2012  James Roberts
             android:id="@+id/io_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dip"
+            android:layout_marginEnd="10dip"
             android:text="@string/io"
             android:textSize="14sp"/>
 
@@ -195,7 +191,7 @@ Copyright (C) 2012  James Roberts
             android:layout_height="wrap_content"
             android:text="@string/sob"
             android:textSize="14sp"
-            android:layout_marginRight="10dip" />
+            android:layout_marginEnd="10dip" />
 
         <Switch
             android:id="@+id/cpu_sob"

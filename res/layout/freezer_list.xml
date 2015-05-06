@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-        * Created by h0rn3t on 15.09.2013.
+XPerience Kernel Tweaker - An Android CPU Control application
+Copyright (C) 2012  James Roberts
+Copyright (C) 2011-2015 Carlos "Klozz" Jesus <TeamMEX@XDA-Developers>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -33,7 +48,7 @@
             android:text="@string/no_proc"
             android:id="@+id/textView"
             android:layout_gravity="center_horizontal"
-            android:textSize="16dp"/>
+            android:textSize="16sp"/>
 
     </LinearLayout>
 
@@ -53,20 +68,21 @@
             android:layout_height="wrap_content"
             android:id="@+id/info"
             android:padding="10dip"
-            android:background="@color/pc_black">
+            android:textColor="@color/white"
+            android:background="@color/gray">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/infotxt"
                 android:textSize="20sp"
-                android:textColor="@color/pc_white"
-                android:layout_marginLeft="6dip" />
+                android:textColor="@color/white"
+                android:layout_marginStart="6dip" />
         </LinearLayout>
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="@color/pc_light_gray"/>
+            android:background="@color/light_gray"/>
         <ListView
             android:id="@+id/applist"
             android:layout_width="fill_parent"

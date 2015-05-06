@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+XPerience Kernel Tweaker - An Android CPU Control application
+Copyright (C) 2012  James Roberts
+Copyright (C) 2011-2015 Carlos "Klozz" Jesus <TeamMEX@XDA-Developers>
 
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -17,7 +34,7 @@
             android:key="pref_so_min"
             android:persistent="true"
             android:title="@string/pt_so_min"/>
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="so_minmax_boot"
             android:summary="@string/ps_blx_boot"
@@ -40,7 +57,7 @@
             android:key="pref_oc_high"
             android:persistent="true"
             android:title="@string/oc_target_high"/>
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="oc_live_boot"
             android:summary="@string/ps_blx_boot"
@@ -50,11 +67,11 @@
     <PreferenceCategory
         android:key="mpdecision"
         android:title="@string/mpdecision">
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="pref_mpdecision"
             android:title="@string/pt_mpdecision"/>
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="mpdecision_boot"
             android:summary="@string/ps_dsync"
@@ -64,7 +81,7 @@
     <PreferenceCategory
         android:key="msmhotplug"
         android:title="@string/msmhotplug">
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="pref_msmhotplug"
             android:summary="@string/ps_dsync"
@@ -74,7 +91,7 @@
     <PreferenceCategory
         android:key="hp"
         android:title="@string/pt_hp">
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="pref_hp"
             android:summary="@string/ps_hp"
@@ -97,7 +114,7 @@
             android:key="pref_cpuquiet"
             android:persistent="true"
             android:title="@string/pt_cpuquiet"/>
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="cpuq_boot"
             android:summary="@string/ps_restore_boot"
@@ -107,7 +124,7 @@
     <PreferenceCategory
         android:key="intelliplug"
         android:title="@string/intelliplug">
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="pref_intelliplug"
             android:summary="@string/ps_dsync"
@@ -115,9 +132,21 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="intelli_prof"
+        android:title="@string/int_prof">
+        <ListPreference
+            android:dialogTitle="@string/int_prof"
+            android:key="pref_intelliprof"
+            android:persistent="true"
+            android:title="@string/int_prof"
+            android:summary="intelli_plugprof_sum"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="ecomode"
         android:title="@string/ecomode">
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="pref_ecomode"
             android:summary="@string/ps_dsync"
@@ -132,7 +161,7 @@
             android:key="pref_mcps"
             android:persistent="true"
             android:title="@string/pt_mc_ps"/>
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="pref_mc_ps"
             android:summary="@string/ps_blx_boot"
@@ -147,7 +176,7 @@
             android:key="pref_gpu_fmax"
             android:persistent="true"
             android:title="@string/pt_gpu_fmax"/>
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="gpu_fmax_boot"
             android:summary="@string/ps_blx_boot"
@@ -165,7 +194,7 @@
     <PreferenceCategory
         android:key="uv_krait"
         android:title="@string/krait">
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="pref_krait_boost"
             android:summary="@string/ps_krait_boost"
@@ -183,7 +212,7 @@
             android:key="pref_krait_hi"
             android:summary="@string/ps_krait_hi"
             android:title="@string/pt_krait_hi"/>
-        <CheckBoxPreference
+        <SwitchPreference
             android:defaultValue="false"
             android:key="krait_uv_boot"
             android:summary="@string/ps_restore_boot"

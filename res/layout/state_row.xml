@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-Performance Control - An Android CPU Control application
-Copyright (C) Brandon Valosek, 2011 <bvalosek@gmail.com>
-Copyright (C) 2012  James Roberts
+XPerience Kernel Tweaker - An Android CPU Control application
+Copyright (C) 2012  James Roberts 
+Copyright (C) 2014 horn3t
+Copyright (C) 2011-2015 Carlos "Klozz" Jesus <TeamMEX@XDA-Developers>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -33,7 +34,7 @@ Copyright (C) 2012  James Roberts
                 android:id="@+id/ui_freq_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
             android:textStyle="bold" />
 
@@ -41,17 +42,17 @@ Copyright (C) 2012  James Roberts
                 android:id="@+id/ui_duration_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
-                android:gravity="right"/>
+                android:gravity="end"/>
 
         <TextView
                 android:id="@+id/ui_percentage_text"
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="0"
-                android:gravity="right"/>
+                android:gravity="end"/>
     </LinearLayout>
 
     <ProgressBar

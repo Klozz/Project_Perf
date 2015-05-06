@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-Performance Control - An Android CPU Control application
-Copyright (C) 2012 Jared Rummler
-Copyright (C) 2012  James Roberts
+XPerience Kernel Tweaker - An Android CPU Control application
+Copyright (C) 2012  James Roberts 
+Copyright (C) 2014 horn3t
+Copyright (C) 2011-2015 Carlos "Klozz" Jesus <TeamMEX@XDA-Developers>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -17,7 +18,6 @@ Copyright (C) 2012  James Roberts
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -52,7 +52,6 @@ Copyright (C) 2012  James Roberts
             >
     </ListView>
 
-
     <RelativeLayout
             android:id="@+id/BottomBar"
             android:layout_width="match_parent"
@@ -65,7 +64,7 @@ Copyright (C) 2012  James Roberts
         <View
             android:layout_width="fill_parent"
             android:layout_height="1dp"
-            android:background="@color/pc_light_gray"/>
+            android:background="@color/light_gray"/>
         <TextView
                 android:id="@+id/set_on_boot_voltage"
                 android:layout_width="wrap_content"
@@ -74,7 +73,8 @@ Copyright (C) 2012  James Roberts
                 android:text="@string/sob"
                 android:textSize="14sp"
                 android:paddingBottom="4dip"
-                android:paddingLeft="4dip"
+            android:paddingStart="4dip"
+            android:paddingEnd="4dip"
             android:layout_marginTop="10dp" />
 
         <Switch
@@ -87,12 +87,12 @@ Copyright (C) 2012  James Roberts
                 android:id="@+id/applyBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
+                android:layout_gravity="end"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="@string/apply_values"
                 android:textSize="14sp"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp" />
 
     </RelativeLayout>

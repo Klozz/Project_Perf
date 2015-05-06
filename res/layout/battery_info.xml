@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+XPerience Kernel Tweaker - An Android CPU Control application
+Copyright (C) 2012  James Roberts
+Copyright (C) 2011-2015 Carlos "Klozz" Jesus <TeamMEX@XDA-Developers>
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:elevation="5dp">
 <RelativeLayout
   android:id="@+id/parentview"
               android:orientation="vertical"
@@ -10,7 +29,7 @@
               android:layout_width="match_parent"
               android:layout_height="wrap_content">
     <LinearLayout
-        android:id="@+id/batt_val"
+        android:id="@+id/battery_val"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -22,12 +41,12 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/batt_icon"
-            android:src="@drawable/battery_1"
+            android:id="@+id/battery_icon"
+            android:src="@drawable/battery1"
             android:layout_marginBottom="6dp" />
 
         <TextView
-                android:id="@+id/batt_volt"
+                android:id="@+id/battery_volt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="46sp"
@@ -35,12 +54,12 @@
             android:layout_marginBottom="6dip"
             android:padding="6dp" />
         <TextView
-                android:id="@+id/batt_percent"
+                android:id="@+id/battery_percent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="40sp" />
         <TextView
-                android:id="@+id/batt_status"
+                android:id="@+id/battery_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="22sp" />
@@ -51,7 +70,7 @@
             android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:layout_below="@+id/batt_val">
+        android:layout_below="@+id/battery_val">
 
   <LinearLayout android:id="@+id/blx_layout"
             android:layout_width="match_parent"
@@ -83,7 +102,7 @@
          <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:layout_marginRight="4dip"
+                 android:layout_marginEnd="4dip"
                  android:text="@string/sob"
                  android:textSize="14sp"/>
 
@@ -105,7 +124,7 @@
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="4dip"
+                android:layout_marginEnd="4dip"
                 android:text="@string/ps_fast_charge_boot"
                 android:textSize="14sp"/>
 

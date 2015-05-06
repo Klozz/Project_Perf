@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.brewcrewfoo.performance.util.DragSortListView
+<!--
+XPerience Kernel Tweaker - An Android CPU Control application
+Copyright (C) 2012  James Roberts
+Copyright (C) 2011-2015 Carlos "Klozz" Jesus <TeamMEX@XDA-Developers>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<mx.klozz.xperience.tweaker.DragSort.DragSortListView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:dslv="http://schemas.android.com/apk/res/com.brewcrewfoo.performance"
+    xmlns:dslv="http://schemas.android.com/apk/res/mx.klozz.xperience.tweaker"
     android:id="@+id/applist"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:paddingTop="0dp"
     android:paddingBottom="0dp"
-    android:paddingLeft="10dp"
+    android:paddingStart="10dp"
     android:layout_margin="10dp"
     dslv:drag_enabled="true"
     dslv:collapsed_height="2dp"
@@ -22,17 +40,3 @@
     dslv:remove_enabled="false"
     dslv:drag_start_mode="onLongPress"
     dslv:remove_mode="flingRemove" />
-
-
-<!--
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ListView
-            android:id="@+id/applist"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"/>
-
-</RelativeLayout>
--->

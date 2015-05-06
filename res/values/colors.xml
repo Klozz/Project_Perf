@@ -2,14 +2,19 @@
 
 <resources>
 
-    <color name="pc_cat_gray">#ff3b3b3b</color>
-    <color name="pc_light_gray">#ff4d4d4d</color>
-    <color name="pc_light_gray2">#ffb0b0b0</color>
-    <color name="pc_gray">#ff333333</color>
-    <color name="pc_blue">#ff0099cc</color>
-    <color name="pc_blue_dark">#ff224687</color>
-    <color name="pc_white">#ffffffff</color>
-    <color name="pc_black">#ff141414</color>
-    <color name="pc_red">#ffff0000</color>
-    <color name="pc_hover">#409f9f9f</color>
+    <color name="cat_gray">#ff3b3b3b</color>
+    <color name="light_gray">#ff4d4d4d</color>
+    <color name="light_gray2">#ffb0b0b0</color>
+    <color name="gray">#ff333333</color>
+    <color name="blue">#ff0099cc</color>
+    <color name="blue_dark">#ff224687</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff141414</color>
+    <color name="red">#ffff0000</color>
+    <color name="hover">#409f9f9f</color>
+    <color name="primary">#ffff0000</color>
+    <color name="primary_dark">#ffe10505</color>
+    <color name="primary2">#ff7dabf6</color>
+    <color name="primary_dark2">#ff6093e1</color>
+    <color name="accent">#ff892e8b</color>
 </resources>
