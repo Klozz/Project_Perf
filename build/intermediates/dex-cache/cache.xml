@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\klozz\Documents\AndroidstudioProjects\Tweaker\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="C:\Users\klozz\Documents\AndroidstudioProjects\Tweaker\app\build\intermediates\pre-dexed\debug\classes-5530d9ca73921ad866b7c181b493a63b12c194a6.jar" />
+    </item>
+    <item
+        jar="C:\Users\klozz\Documents\AndroidstudioProjects\Tweaker\app\build\intermediates\exploded-aar\com.android.support\support-v13\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="def3eff2b7b4774d96ae15b07b3fc0111edbfe24">
+        <dex dex="C:\Users\klozz\Documents\AndroidstudioProjects\Tweaker\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-29f2f06d729aa1fdfb629eff019884e89e6c24cd.jar" />
+    </item>
+    <item
+        jar="C:\Users\klozz\Documents\AndroidstudioProjects\Tweaker\app\build\intermediates\exploded-aar\com.android.support\support-v13\22.0.0\classes.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="7f9cca1caa023a880b00c382bcc5c90245ae4895">
+        <dex dex="C:\Users\klozz\Documents\AndroidstudioProjects\Tweaker\app\build\intermediates\pre-dexed\debug\classes-8768e908f318d73ae502bb494bf85294f076cfc7.jar" />
+    </item>
+    <item
+        jar="C:\Users\klozz\Documents\AndroidstudioProjects\Tweaker\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="C:\Users\klozz\Documents\AndroidstudioProjects\Tweaker\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-d7ffb8485016ca729654497e096e1a9d345dab06.jar" />
+    </item>
+    <item
+        jar="C:\Users\klozz\Documents\AndroidSDK\android-sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="22.0.0"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="C:\Users\klozz\Documents\AndroidstudioProjects\Tweaker\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-3998659babadff192f57d0d75d234850a0a861df.jar" />
+    </item>
+
+</items>
