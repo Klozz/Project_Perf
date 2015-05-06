@@ -18,5 +18,11 @@ Xoomdev
 AOKP team
 Horn3t and others 
 
+Started modification of the app
+Since October 21 , 2014 
+Published changes on github may 5 2015 
+
+
+
 
 
