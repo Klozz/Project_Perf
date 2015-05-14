@@ -35,6 +35,9 @@ public interface Constants {
     public final Utils mUtils = new Utils();
     public final String PREF_NAME = "commands";
 
+    //Availables
+    public static final String AVAILABLE_FREQ = "/sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state";
+
     // CPU settings
     public static final String CPU_ON_PATH = "/sys/devices/system/cpu/cpu0/online";
     public static final String CUR_CPU_PATH = "/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq";
