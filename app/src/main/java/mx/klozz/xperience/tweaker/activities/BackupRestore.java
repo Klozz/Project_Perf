@@ -343,7 +343,7 @@ public class BackupRestore extends Activity implements Constants, AdapterView.On
                 progressDialog.dismiss();
             }
             if (result.equals("ok")) {
-                MainActivity.is_restored = true;
+
             }
         }
 

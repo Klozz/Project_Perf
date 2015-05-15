@@ -4,6 +4,11 @@
     <string name="CPU_VIEW_1">1</string>
     <string name="ver_dialog_Medium_Text">Medium Text</string>
 
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_websearch">Web search</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+
     <!-- Main tabs -->
     <string-array name="tabs">
         <item>Time In State</item>
@@ -472,4 +477,74 @@
     <string name="KernelTweaker3">licensia</string>
 
     <string name="changelog_error">Error opening license</string>
+    <string name="cpu">cpu</string>
+    <string name="battery">battery</string>
+    <string name="audio">audio</string>
+    <string name="voltage">voltage</string>
+    <string name="minfree">minfree</string>
+    <string name="vm">VM</string>
+    <string name="information">information</string>
+    <string name="tools">tools</string>
+    <string name="diskinfo">diskinfo</string>
+    <string name="setonboot">Set on Book</string>
+    <string name="apply">Apply</string>
+    <string name="applysuccessfully">Apply succesfully</string>
+    <string name="db">DB</string>
+    <string name="fauxsoundcontrol">Faux Sound Control</string>
+    <string name="cammicgain">Camcoder Microphone Gain</string>
+    <string name="handsetmicgain">Headset Microphone Gain</string>
+    <string name="speakergain">Speaker Gain</string>
+    <string name="headphonepagain">HeadPhone PowerAmp gain</string>
+    <string name="headphonegain">HeadPhone Gain</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="deepsleep">DeepSleep</string>
+    <string name="mhz">MHZ</string>
+    <string name="minscreenonfreq">Min Screen On Freq</string>
+    <string name="cpugovernor">CPU Gobernor</string>
+    <string name="core">core</string>
+    <string name="intelliplugecomode">intelli plug ecomode</string>
+    <string name="offline">Offline</string>
+    <!-- CPU -->
+    <string name="currentfreq">Current CPU Frequency</string>
+    <string name="maxfreq">CPU Maximum Frequency</string>
+    <string name="maxfreq_summary">Set the maximum frequency the CPU scales up to.</string>
+    <string name="minfreq">CPU Minimum Frequency</string>
+    <string name="minfreq_summary">Set the minimum frequency the CPU scales down to.</string>
+    <string name="maxscreenofffreq">CPU Maximum Frequency Screen Off</string>
+    <string name="maxscreenofffreq_summary">Set the maximum frequency the CPU scales up to when the screen is off.</string>
+    <string name="minscreenonfreq_summary">Set the minimum frequency the CPU scales down to when the screen is on.</string>
+    <string name="cpugovernor_summary">The CPU governor determines how the CPU behaves in response to changes in workload. Changing the governor will impact how the CPU scales through the frequency steps available to you CPU.</string>
+    <!--Battery-->
+    <string name="curbatteryvoltage">Current Battery Voltage</string>
+    <string name="fastcharge">Fast Charge</string>
+    <string name="blx">Battery Life eXtender</string>
+    <string name="blx_summary">Set a limit for the capacity to which the battery will be charged by passing a value between 0 and 100.</string>
+    <string name="mv">mv</string>
+    <string name="kb">KB</string>
+
+    <!-- IO -->
+    <string name="internalstoragescheduler">Internal Storage Scheduler</string>
+    <string name="storagescheduler_summary">Set the active I/O elevator algorithm. The scheduler decides how to handle I/O requests and how to handle them.</string>
+    <string name="externalstoragescheduler">External Storage Scheduler</string>
+    <string name="internalstorageread">Internal Storage Read-ahead</string>
+    <string name="internalstorageread_summary">The read-ahead value on the internal phone memory.</string>
+    <string name="externalstorageread">External Storage Read-ahead</string>
+    <string name="externalstorageread_summary">The read-ahead value on the external phone memory.</string>
+    <string name="mb">MB</string>
+    <string name="emptyapplications">Empty applications</string>
+    <string name="contentproviders">Content Providers</string>
+    <string name="hiddenapplications">Hidden Applications</string>
+    <string name="secondaryserver">Secondary Server</string>
+    <string name="visbileapplications">Visible Applications</string>
+    <string name="forgroundapplications">Foreground Applications</string>
+    <string name="vmtuning">VM Tunning</string>
+    <string name="vmtunig_summary">Tune the operation of the virtual memory (VM) subsystem of the Linux kernel and the writeout of dirty data to disk.</string>
+    <!-- Voltage -->
+    <string name="voltagecontrol">Voltage Control</string>
+    <string name="voltagecontrol_summary">Decreasing voltage will lower power consumption of the CPU. Increasing it on overclocked frequencies improves stability. Too low voltage may cause instabilities and freezes.</string>
+    <string name="fauxvoltagecontrol">Faux Voltage Control</string>
+    <string name="Advanced">Advanced</string>
+    <string name="gpu">GPU</string>
+    <string name="pt_gpu_gov">gpu governor</string>
 </resources>

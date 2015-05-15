@@ -132,12 +132,6 @@ public class FreezerActivity extends Activity implements Constants, AdapterView.
                 cr = new CMDProcessor().sh.runWaitFor("busybox echo `pm list packages -d | cut -d':' -f2`");
             } else {
                 cr = new CMDProcessor().sh.runWaitFor("busybox echo `pm list packages -e | cut -d':' -f2`");
-                /*if(packs.equals("sys")){
-                    cr=new CMDProcessor().sh.runWaitFor("busybox echo `pm list packages -s -e | cut -d':' -f2`");
-                }
-                else{
-                    cr=new CMDProcessor().sh.runWaitFor("busybox echo `pm list packages -3 -e | cut -d':' -f2`");
-                }*/
             }
             list.clear();
             if (cr.success() && !cr.stdout.equals("")) {

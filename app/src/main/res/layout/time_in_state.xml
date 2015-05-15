@@ -29,6 +29,10 @@ Copyright (C) 2012  James Roberts
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+        <TextView
+            android:id="@+id/kernelinfo"
+            style="?android:attr/listSeparatorTextViewStyle"
+            android:text="Kernel"/>
 
         <TextView
                 android:id="@+id/ui_header_total_state_time"

@@ -26,7 +26,7 @@ import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.util.Log;
 
-import mx.klozz.xperience.tweaker.fragments.VoltageControlSettings;
+import mx.klozz.xperience.tweaker.fragments.VoltageFragment;
 import mx.klozz.xperience.tweaker.helpers.Helpers;
 
 import java.io.File;
@@ -261,41 +261,6 @@ public class BootClass implements Constants {
                         if (aP != null && aP.contains(":")) {
                             final String pn[] = aP.split(":");
                             sb.append("busybox echo ").append(pn[1]).append(" > ").append(gpu.gpugovset_path()).append("/").append(pn[0]).append(";\n");
-                        }
-                    }
-                }
-            }
-        }
-        if (preferences.getBoolean(VOLTAGE_SOB, false)) {
-
-            if (Helpers.voltageFileExists()) {
-                final List<Voltage> volts = VoltageControlSettings.bootgetVolts(preferences);
-                final String vddpath = Helpers.getVoltagePath();
-                if (vddpath.equals(VDD_PATH)) {
-                    for (final Voltage volt : volts) {
-                        if (!volt.getSavedMV().equals(volt.getCurrentMv())) {
-                            for (byte i = 0; i < ncpus; i++) {
-                                sb.append("busybox echo \"").append(volt.getFreq()).append(" ").append(volt.getSavedMV()).append("\" > ").append(vddpath.replace("cpu0", "cpu" + i)).append(";\n");
-                            }
-                        }
-                    }
-                } else if (vddpath.equals(VDD_TABLE)) {
-                    for (final Voltage volt : volts) {
-                        if (!volt.getSavedMV().equals(volt.getCurrentMv())) {
-                            sb.append("busybox echo \"").append(volt.getFreq()).append(" ").append(volt.getSavedMV()).append("\" > ").append(vddpath).append(";\n");
-                        }
-                    }
-                } else {
-                    //other formats
-                    final StringBuilder b = new StringBuilder();
-                    for (final Voltage volt : volts) {
-                        b.append(volt.getSavedMV()).append(" ");
-                    }
-                    if (vddpath.equals(COMMON_VDD_PATH)) {
-                        sb.append("busybox echo \"").append(b.toString()).append("\" > ").append(vddpath).append(";\n");
-                    } else {
-                        for (byte i = 0; i < ncpus; i++) {
-                            sb.append("busybox echo \"").append(b.toString()).append("\" > ").append(vddpath.replace("cpu0", "cpu" + i)).append(";\n");
                         }
                     }
                 }

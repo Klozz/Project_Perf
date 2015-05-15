@@ -19,6 +19,7 @@ import java.util.Map;
 import android.os.SystemClock;
 
 import mx.klozz.xperience.tweaker.util.Constants;
+import mx.klozz.xperience.tweaker.util.Utils;
 
 /**
  * CpuStateMonitor is a class responsible for querying the system and getting
@@ -33,6 +34,7 @@ public class CpuStateMonitor implements Constants {
     /**
      * exception class
      */
+
     public class CpuStateMonitorException extends Exception {
         /**
          *

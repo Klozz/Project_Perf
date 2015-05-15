@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+XPerience Kernel Tweaker - An Android CPU Control application
+Copyright (C) 2012  James Roberts
+Copyright (C) 2011-2015 Carlos "Klozz" Jesus <TeamMEX@XDA-Developers>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!-- -GPU- -->
+    <PreferenceCategory
+        android:key="gpu_max_clk"
+        android:title="@string/pt_gpu_fmax">
+        <ListPreference
+            android:dialogTitle="@string/pt_gpu_fmax"
+            android:key="pref_gpu_fmax"
+            android:persistent="true"
+            android:title="@string/pt_gpu_fmax"/>
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="gpu_fmax_boot"
+            android:summary="@string/ps_blx_boot"
+            android:title="@string/sob"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="gpugovset"
+        android:title="@string/pt_gpugov_set">
+        <Preference
+            android:key="pref_gpugov_set"
+            android:title="@string/pt_gpugov_set"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -22,8 +22,8 @@ import java.io.File;
 import mx.klozz.xperience.tweaker.helpers.Helpers;
 
 public class GPUClass implements Constants {
-    private String clkpath = null;
-    private String clkvals = "";
+    private String clkpath = null, govpath = null;
+    private String clkvals = "", govvals="";
 
     public GPUClass() {
         gpu_clk();
@@ -37,11 +37,22 @@ public class GPUClass implements Constants {
     public CharSequence[] gpuclk_values() {
         return this.clkvals.split("\\s");
     }
+    public CharSequence[] gpugov_values() {
+        return this.govvals.split("\\s");
+    }
 
     public CharSequence[] gpuclk_names() {
         CharSequence[] v = gpuclk_values();
         for (int i = 0; i < v.length; i++) {
             v[i] = Helpers.toMHz(String.valueOf(Integer.parseInt(v[i].toString()) / 1000));
+        }
+        return v;
+    }
+
+    public CharSequence[] gpugov_names() {
+        CharSequence[] v = gpugov_values();
+        for (int i = 0; i < v.length; i++) {
+            v[i] = Helpers.LeerUnaLinea("/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/available_governors");
         }
         return v;
     }
@@ -89,6 +100,14 @@ public class GPUClass implements Constants {
             return "/sys/module/msm_kgsl_core/parameters";
         } else if (new File("/sys/kernel/debug/tegra_host/scaling").exists()) {
             return "/sys/kernel/debug/tegra_host/scaling";
+        }else if(new File("/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/available_governors").exists()){//Moto-G
+            this.govpath = "/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/available_governors";
+            this.govvals = Helpers.LeerUnaLinea("/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/available_governors");
+            return "/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/available_governors";
+        }else if(new File("/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/governor").exists()){//Moto-G
+            this.clkpath = "/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/governor";
+            this.govvals = Helpers.LeerUnaLinea("/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/governor");
+            return "/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/governor";
         } else {
             return null;
         }
@@ -97,6 +116,10 @@ public class GPUClass implements Constants {
     private String gpu_gov_path() {//Direccion donde encotraremos los gobernadores de la CPU
         if (new File("/sys/kernel/pvr_simple_gov/simple_governor").exists()) {
             return "/sys/kernel/pvr_simple_gov/simple_governor";
+        }else if(new File("/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/available_governors").exists()){//Moto-G
+            return  "/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/available_governors";
+        }else if(new File("/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/governor").exists()){//Moto-G
+            return  "/sys/bus/platforms/drivers/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/governor";
         } else if (new File("/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor").exists()) {
             return "/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor";
         } else if (new File("/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor").exists()) {

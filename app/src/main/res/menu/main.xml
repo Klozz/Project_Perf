@@ -1,12 +1,19 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
     <item
-        android:id="@+id/action_example"
-        android:title="action_example"
-        android:showAsAction="withText|ifRoom" />
+        android:id="@+id/action_setonboot"
+        android:checkable="true"
+        android:title="@string/setonboot"/>
     <item
-        android:id="@+id/action_settings"
-        android:title="action_settings"
-        android:orderInCategory="100"
-        android:showAsAction="never" />
+        android:id="@+id/action_apply"
+        android:icon="@drawable/ic_action_accept"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/apply"/>
+    <item
+        android:id="@+id/action_cancel"
+        android:icon="@drawable/ic_action_cancel"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/cancel"/>
+
 </menu>

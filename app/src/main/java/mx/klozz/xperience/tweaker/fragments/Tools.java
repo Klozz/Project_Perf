@@ -14,10 +14,13 @@
  *
  * You should have received a copy of the GNU General Public License along with
  * this program. If not, see <http://www.gnu.org/licenses/>.
+ *
  */
-
 package mx.klozz.xperience.tweaker.fragments;
 
+/**
+ * Created by klozz on 14/05/2015.
+ */
 import android.app.AlertDialog;
 import android.app.Dialog;
 
@@ -45,8 +48,8 @@ import mx.klozz.xperience.tweaker.R;
 import mx.klozz.xperience.tweaker.activities.BuildPropEditor;
 import mx.klozz.xperience.tweaker.activities.FlasherActivity;
 import mx.klozz.xperience.tweaker.activities.FreezerActivity;
-import mx.klozz.xperience.tweaker.activities.Settings;
 import mx.klozz.xperience.tweaker.activities.ResidualsActivity;
+import mx.klozz.xperience.tweaker.activities.Settings;
 import mx.klozz.xperience.tweaker.activities.SysctlEditor;
 import mx.klozz.xperience.tweaker.util.CMDProcessor;
 import mx.klozz.xperience.tweaker.util.Constants;
@@ -56,9 +59,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
-public class Tools extends PreferenceFragment implements OnSharedPreferenceChangeListener, Constants {
-
+public class Tools extends PreferenceFragment implements OnSharedPreferenceChangeListener,Constants {
     private int tip;
     SharedPreferences mPreferences;
     private EditText settingText;

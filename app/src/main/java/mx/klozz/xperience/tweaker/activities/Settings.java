@@ -40,7 +40,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import mx.klozz.xperience.tweaker.R;
-import mx.klozz.xperience.tweaker.tabs.HideTabs;
+//import mx.klozz.xperience.tweaker.tabs.HideTabs;
 import mx.klozz.xperience.tweaker.util.ActivityThemeChangeInterface;
 import mx.klozz.xperience.tweaker.util.BootClass;
 import mx.klozz.xperience.tweaker.util.Constants;
@@ -51,7 +51,7 @@ import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import java.io.File;
 import java.util.List;
 
-public class Settings extends PreferenceActivity implements Constants, ActivityThemeChangeInterface, OnPreferenceChangeListener {
+public class Settings extends PreferenceActivity implements Constants, ActivityThemeChangeInterface {
 
     SharedPreferences mPreferences;
     private SwitchPreference mLightThemePref, mInitd;
@@ -72,10 +72,10 @@ public class Settings extends PreferenceActivity implements Constants, ActivityT
 
         mLightThemePref = (SwitchPreference) findPreference("use_light_theme");
 
-        mWidgetBgColorPref = (ColorPickerPreference) findPreference("widget_bg_color");
-        mWidgetBgColorPref.setOnPreferenceChangeListener(this);
-        mWidgetTextColorPref = (ColorPickerPreference) findPreference("widget_text_color");
-        mWidgetTextColorPref.setOnPreferenceChangeListener(this);
+        //mWidgetBgColorPref = (ColorPickerPreference) findPreference("widget_bg_color");
+        //mWidgetBgColorPref.setOnPreferenceChangeListener(this);
+        //mWidgetTextColorPref = (ColorPickerPreference) findPreference("widget_text_color");
+        //mWidgetTextColorPref.setOnPreferenceChangeListener(this);
 
         mVersion = findPreference("version_info");
         mVersion.setTitle(getString(R.string.ver) + VERSION_NUM);
@@ -103,9 +103,9 @@ public class Settings extends PreferenceActivity implements Constants, ActivityT
             return true;
         } else if (key.equals("licensia")) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(licensia)));
-        } else if (key.equals("visible_tabs")) {
-            startActivity(new Intent(this, HideTabs.class));
-            return true;
+//        } else if (key.equals("visible_tabs")) {
+  //          startActivity(new Intent(this, HideTabs.class));
+    //        return true;
         } else if (key.equals("boot_mode")) {
             if (mInitd.isChecked()) {
                 LayoutInflater factory = LayoutInflater.from(this);
@@ -204,30 +204,6 @@ public class Settings extends PreferenceActivity implements Constants, ActivityT
         } else if (key.equals("version_info")) {
         } else if (key.equals("pref_donate")) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(PAYPAL)));
-        }
-        return false;
-    }
-
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mWidgetBgColorPref) {
-            String hex = ColorPickerPreference.convertToARGB(Integer.parseInt(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            final SharedPreferences.Editor editor = mPreferences.edit();
-            editor.putInt(PREF_WIDGET_BG_COLOR, intHex);
-            editor.commit();
-            Helpers.updateAppWidget(this);
-            return true;
-        } else if (preference == mWidgetTextColorPref) {
-            String hex = ColorPickerPreference.convertToARGB(Integer.parseInt(String.valueOf(newValue)));
-            preference.setSummary(hex);
-            int intHex = ColorPickerPreference.convertToColorInt(hex);
-            final SharedPreferences.Editor editor = mPreferences.edit();
-            editor.putInt(PREF_WIDGET_TEXT_COLOR, intHex);
-            editor.commit();
-            Helpers.updateAppWidget(this);
-            return true;
         }
         return false;
     }

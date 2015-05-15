@@ -39,7 +39,6 @@ import android.util.Log;
 
 import mx.klozz.xperience.tweaker.R;
 import mx.klozz.xperience.tweaker.util.CMDProcessor;
-import mx.klozz.xperience.tweaker.widget.Widget;
 import mx.klozz.xperience.tweaker.util.Constants;
 
 import java.io.*;
@@ -228,17 +227,6 @@ public class Helpers implements Constants {
     /*
      * HElper para Widget
      */
-
-    public static void updateAppWidget(Context context) {
-        AppWidgetManager widgetManager = AppWidgetManager.getInstance(context);
-        ComponentName widgetComponent = new ComponentName(context, Widget.class);
-        int[] widgetIds = widgetManager.getAppWidgetIds(widgetComponent);
-        Intent update = new Intent();
-        update.setAction("mx.klozz.xperience.tweaker.ACTION_FREQS_CHANGED");
-        update.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, widgetIds);
-        context.sendBroadcast(update);
-    }
-
     public static Bitmap getBackground(int bgcolor) {
         try {
             Bitmap.Config config = Bitmap.Config.ARGB_8888;

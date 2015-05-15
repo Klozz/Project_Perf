@@ -17,6 +17,7 @@
  */
 package mx.klozz.xperience.tweaker.util;
 
+import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
@@ -28,10 +29,12 @@ import mx.klozz.xperience.tweaker.MainActivity;
 public class PackageItem {
     private String packname, appname;
 
+    public static Context contexto;
+
     public PackageItem(String p) {
         try {
-            PackageInfo packageInfo = MainActivity.contexto.getPackageManager().getPackageInfo(p, 0);
-            this.appname = MainActivity.contexto.getPackageManager().getApplicationLabel(packageInfo.applicationInfo).toString();
+            PackageInfo packageInfo = MainActivity.context.getPackageManager().getPackageInfo(p, 0);
+            this.appname = MainActivity.context.getPackageManager().getApplicationLabel(packageInfo.applicationInfo).toString();
         } catch (PackageManager.NameNotFoundException e) {
             //e.printStackTrace();
             this.appname = "";
